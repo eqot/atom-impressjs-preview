@@ -1,0 +1,6 @@
+{
+  "name": "impressjs-preview",
+  "dependencies": {
+    "impress.js": "~0.5.3"
+  }
+}

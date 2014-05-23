@@ -1,0 +1,14 @@
+{
+  "name": "impressjs-preview",
+  "main": "./lib/impressjs-preview",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationEvents": ["impressjs-preview:toggle"],
+  "repository": "https://github.com/atom/impressjs-preview",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
