@@ -3,11 +3,12 @@
 module.exports =
 class ImpressjsPreviewView extends View
   @content: ->
-    @div class: 'impressjs-preview overlay from-top', =>
-      @div "The ImpressjsPreview package is Alive! It's ALIVE!", class: "message"
+    @div 'This is a test.'
 
-  initialize: (serializeState) ->
-    atom.workspaceView.command "impressjs-preview:toggle", => @toggle()
+  @editorId: null
+
+  initialize: (arg) ->
+    @editorId = arg.editorId
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -16,9 +17,11 @@ class ImpressjsPreviewView extends View
   destroy: ->
     @detach()
 
-  toggle: ->
-    console.log "ImpressjsPreviewView was toggled!"
-    if @hasParent()
-      @detach()
-    else
-      atom.workspaceView.append(this)
+  getTitle: ->
+    return 'impressjs-preview'
+
+  getUri: ->
+    return 'impressjs-preview://editor/' + @editorId
+
+  render: ->
+    return
