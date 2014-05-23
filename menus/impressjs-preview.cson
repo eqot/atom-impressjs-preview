@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable impressjs-preview': 'impressjs-preview:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'impressjs-preview'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'impressjs-preview:toggle' }
+      ]
+    ]
+  }
+]
